@@ -1,0 +1,330 @@
+<!-- 
+** Jacob Heasley
+    10/14/2015 **
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+    <title>JQuery Examples</title>
+    
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<script src="js/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    //when hovering over tags with "derp" id, set cursor to pointer.
+    $("#derp").css( 'cursor', 'url(images/crosshair.png), auto' );
+    $("#dialog1").css( 'cursor', 'pointer' );
+    $("#dialog2").css( 'cursor', 'pointer' );
+    $("#dialog3").css( 'cursor', 'pointer' );
+    $("#dialog4").css( 'cursor', 'pointer' );
+	
+	
+    //when click on tag with "derp" id...
+    $("#derp").click(function(){
+        //Change src attribute to different image source
+        $("#derp").attr("src", "images/derpface-cry.png");
+        //change text with id of "derptext"
+        $("#derptext").text("Please don't click me! I have a family!!");
+        $("#dialog1").text("*run away without harming the stranger*");
+        $("#dialog2").remove();
+        $("#dialog3").remove();
+        $("#dialog4").remove();
+		
+			$("#dialog1").click(function(){
+				$("#dialog1").remove();
+				$("#derp").remove();
+				$("#derptext").text("The stranger chases after you and tackles you to the ground. He tazes you until you pass out.");
+			});
+        
+        
+        //when click tag with "derp" id
+        $("#derp").click(function(){
+            //remove element with "dialog1" id
+			$("#dialog1").remove();
+            $("#derptext").text("You killed him. You're a monster.");
+            //remove element with "derp" id
+            $("#derp").remove();
+        });
+    });
+    
+    //section 1-1
+    $("#dialog1").click(function(){
+        $("#derptext").text("Well hello! Have a nice day!");
+        
+        $("#dialog1").text("See you later!");
+        $("#dialog2").text("*walk away awkwardly*");
+        $("#dialog3").text("Don't tell me what to do!");
+        $("#dialog4").text("*stare at stranger*");
+        
+        //section 1.1-1
+        $("#dialog1").click(function(){
+            $("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("You leave the stranger and go home.");
+        });//end section 1.1-1
+        
+        //section 1.1-2
+        $("#dialog2").click(function(){
+            $("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("You walk away feeling sorry for even leaving the house.");
+        });//end section 1.1-2
+        
+        //section 1.1-3
+        $("#dialog3").click(function(){
+            $("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("The stranger spits in your face and now you have the flu.");
+        });//end section 1.1-3
+        
+        //section 1.1-4
+        $("#dialog4").click(function(){
+            $("#dialog1").text("*continue staring*");
+            $("#dialog2").text("Oh.. sorry..");
+            $("#dialog3").text("Do you want to fight?!?");
+            $("#dialog4").text("*wet pants*");
+            $("#derptext").text("Dude... stop staring at me.");
+            
+            //section 1.1.4-1
+            $("#dialog1").click(function(){
+                $("#derp").remove();
+                $("#dialog1").remove();
+                $("#dialog2").remove();
+                $("#dialog3").remove();
+                $("#dialog4").remove();
+                $("#derptext").text("The stranger kicks you in the groin and you pass out. You wake up with dog feces on your face.");
+            });
+            
+            //section 1.1.4-2
+            $("#dialog2").click(function(){
+                $("#derp").remove();
+                $("#dialog1").remove();
+                $("#dialog2").remove();
+                $("#dialog3").remove();
+                $("#dialog4").remove();
+                $("#derptext").text("The stranger calls you a creep and walks away.");
+            });
+            
+			//section 1.1.4-3
+			$("#dialog3").click(function(){
+                $("#derp").remove();
+                $("#dialog1").remove();
+                $("#dialog2").remove();
+                $("#dialog3").remove();
+                $("#dialog4").remove();
+                $("#derptext").text("The stranger punches you in the nose and you pass out. You wake up with no wallet.");
+            });
+			
+			$("#dialog4").click(function(){
+                $("#derp").remove();
+                $("#dialog1").remove();
+                $("#dialog2").remove();
+                $("#dialog3").remove();
+                $("#dialog4").remove();
+                $("#derptext").text("The stranger begins laughing at you and calls you a freak. You run home crying.");
+            });
+        });//end section 1.1-4
+
+		});//end section 1-1
+    
+    //section 1-2
+    $("#dialog2").click(function(){
+		$("#derptext").text("I think there is a gas station a couple blocks down.");
+        
+        $("#dialog1").text("Oh okay thank you.");
+        $("#dialog2").text("Do you have any change?");
+        $("#dialog3").text("Did I say gas station? *scoff*");
+        $("#dialog4").text("That won't do. I need to buy a kayak.");
+		
+		//section 1.2-1
+		$("#dialog1").click(function(){
+            $("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("You head towards the gas station, get mugged on the way there, and end up in the hospital.");
+        });//end section 1.2-1
+		
+		//section 1.2-2
+		$("#dialog2").click(function(){
+            $("#derptext").text("No dude. Back off.");
+			
+			$("#dialog1").text("Sorry...");
+			$("#dialog2").text("I JUST NEED IT FOR CRACK!");
+			$("#dialog3").text("*reach for the stranger's wallet*");
+			$("#dialog4").text("*wets pants*");
+			
+			//section 1.2.2-1
+			$("#dialog1").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("The stranger pulls out a dollar and gives it to you out of pity. Score!");
+			});//end section 1.2.2-1
+			
+			//section 1.2.2-2
+			$("#dialog2").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("The stranger ends up being a cop, and you get arrested.");
+			});//end section 1.2.2-2
+			
+			//section 1.2.2-3
+			$("#dialog3").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("The stranger breaks your arm, and you end up in the hospital.");
+			});//end section 1.2.2-3
+			
+			//section 1.2.2-4
+			$("#dialog4").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("Dude... stop pissing yourself. That's disgusting.");
+			});//end section 1.2.2-4
+			
+        });//end section 1.2-2
+		
+		//section 1.2-3
+		$("#dialog3").click(function(){
+			$("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("The stranger flips you off, so you awkwardly walk away.");
+		});//end seciton 1.2-3
+		
+		//section 1.2-4
+		$("#dialog4").click(function(){
+			$("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+            $("#derptext").text("The stranger looks at you like you're insane, because you are.");
+		});//end section 1.2-4
+		
+		
+    });//end section 1-2
+    
+    //section 1-3
+    $("#dialog3").click(function(){
+		$("#derptext").text("*pulls out taser* Put your hands up! I'm a police officer!");
+        
+        $("#dialog1").text("AM I BEING DETAINED?!?");
+        $("#dialog2").text("*puts hands up*");
+        $("#dialog3").text("*run away*");
+        $("#dialog4").text("*reach for taser*");
+		
+		//section 1.3-1
+		$("#dialog1").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("Because you said that line, you became a meme on the internet, and now you'll be made fun of for the rest of your life.");
+		});//end section 1.3-1
+		
+		//section 1.3-2
+		$("#dialog2").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("You were arrested, but the charges were dropped because of your good attitude.");
+		});//end section 1.3-2
+		
+		//section 1.3-3
+		$("#dialog3").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("The officer shoots at you, but misses, and you manage to escape. Wow, you're lucky.");
+		});//end section 1.3-3
+		
+		//section 1.3-4
+		$("#dialog4").click(function(){
+				$("#derp").remove();
+				$("#dialog1").remove();
+				$("#dialog2").remove();
+				$("#dialog3").remove();
+				$("#dialog4").remove();
+				$("#derptext").text("The officer tazes you, and you pee yourself.");
+		});//end section 1.3-4
+		
+		
+		$("#derp").click(function(){
+			$("#derp").remove();
+            $("#dialog1").remove();
+            $("#dialog2").remove();
+            $("#dialog3").remove();
+            $("#dialog4").remove();
+			$("#derptext").text("Did you really pull a gun out on a cop? You got tazed silly!");
+		});
+		
+    });//end section 1-3
+    
+    //section 1-4
+    $("#dialog4").click(function(){
+	
+		$("#derp").remove();
+		$("#dialog1").remove();
+		$("#dialog2").remove();
+		$("#dialog3").remove();
+		$("#dialog4").remove();
+		$("#derptext").text("The stranger ignores you and you're unable to creep him out. Bummer.");
+	
+    });//end section 1-4
+    
+
+});
+</script>
+</head>
+
+<body>
+
+<p id="derptext">*You see a stranger waiting at a bus stop*</p>
+<img id="derp" src="images/derpface.png" height="100" width="100"></img>
+
+<div id="dialog">
+<ul>
+    <li id="dialog1">Hello.</li>
+    <li id="dialog2">Where is the nearest Walmart?</li>
+    <li id="dialog3">Yo, give me your money!</li>
+    <li id="dialog4">*glare at stranger*</li>
+</div>
+
+</body>
+</html>
